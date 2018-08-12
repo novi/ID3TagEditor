@@ -31,6 +31,8 @@ public class ID3Tag {
     public lazy var attachedPictures: [AttachedPicture]? = {
         return []
     }()
+    
+    public var tags: [String: String] = [:]
 
     /**
      Init a tag.
