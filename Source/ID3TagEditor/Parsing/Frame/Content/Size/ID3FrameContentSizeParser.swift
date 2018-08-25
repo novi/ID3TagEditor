@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreFoundation
 
 class ID3FrameContentSizeParser: FrameContentSizeParser {
     private let id3FrameConfiguration: ID3FrameConfiguration
