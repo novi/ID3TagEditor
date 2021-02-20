@@ -1,3 +1,4 @@
+// swift-tools-version:5.0
 //
 //  Package.swift
 //  ID3TagEditor
@@ -10,6 +11,14 @@ import PackageDescription
 
 let package = Package(
     name: "ID3TagEditor",
-    dependencies : [],
-    exclude: ["Tests"]
+    products: [
+        .library(name: "ID3TagEditor", targets: ["ID3TagEditor"])
+    ],
+    targets: [
+        .target(
+            name: "ID3TagEditor",
+            dependencies: [
+            ]
+        )
+    ]
 )

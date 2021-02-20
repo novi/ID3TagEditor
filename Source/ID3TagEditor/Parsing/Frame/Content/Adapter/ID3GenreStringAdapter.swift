@@ -15,13 +15,7 @@ class ID3GenreStringAdapter {
         ) else {
             return Genre(genre: nil, description: genre)
         }
-        #if SWIFT_PACKAGE
-        guard let genreWithParenthesis = String(genre[genreWithParenthesisRange]) else {
-            return Genre(genre: nil, description: genre)
-        }
-        #else
         let genreWithParenthesis = String(genre[genreWithParenthesisRange])
-        #endif
         let genreIdentifier = adaptGenreIdentifierFrom(genreWithParenthesis: genreWithParenthesis)
         let genreDescription = adaptGenreDescriptionFrom(
                 genreDescriptionExtracted: String(genre[genreWithParenthesisRange.upperBound..<genre.endIndex]),
